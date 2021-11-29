@@ -1,0 +1,3 @@
+[submodule "lib/sss"]
+	path = lib/sss
+	url = git@github.com:dsprenkels/sss.git
