@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "sss-cffi"
+version = "0.0.1"
+description = "C-based Shamir Secret Sharing Python bindings"
+authors = ["The Codestove Collective <info@codestove.dev>"]
+license = "MIT"
+
+packages = [
+    { include = "sss", from = "src" },
+    { include = "sss/**/*.so" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+cffi = "^1.15.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.build]
+script = "src/sss/_ffi_build.py"
+generate-setup-file = false
