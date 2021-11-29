@@ -1,4 +1,5 @@
 .idea
 .*.py[oc]
 sss
+!src/sss/
 dist
